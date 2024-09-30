@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
             isSecret: true,
           ));
           _hasReachedEnd = true;
-          _showStoryAlert();
+          //_showStoryAlert();
           //_scrollController.jumpTo(0);
         });
       }
