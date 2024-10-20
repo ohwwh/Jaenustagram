@@ -1,5 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../controller/audio_player_controller.dart';
 
 class DosScreen extends StatefulWidget {
   @override
@@ -11,8 +15,15 @@ class _DosScreenState extends State<DosScreen> {
   List<String> linesToAdd = [
     "첫 만남: 2021/05/14",
     "우리가 만난지: 1252일",
-    "저와 함께 새로운 1일을 시작하시겠습니까?",
-    "문을 열고 밖으로 나와주세요"
+    "오늘, 당신과 함께", "새로운 여행을 시작하려고 합니다.",
+    "저와 함께",
+    "새로운 1일을 시작하시겠습니까?",
+    "준비가 되셨다면......",
+    "",
+    "",
+    "",
+    "",
+    "뒤를 돌아 밖으로 나와 주세요"
   ];
   int currentLine = 0;
   String currentText = ""; // 현재 출력 중인 텍스트
@@ -72,7 +83,8 @@ class _DosScreenState extends State<DosScreen> {
             }
           }
         } else {
-          typingTimer?.cancel(); // 모든 줄이 다 출력되면 타이머 종료
+          typingTimer?.cancel();
+          Get.find<AudioPlayerController>().stopMusic();// 모든 줄이 다 출력되면 타이머 종료
         }
       });
     });
@@ -113,32 +125,41 @@ class _DosScreenState extends State<DosScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ...lines.map((line) => Text(
-              line,
-              style: const TextStyle(
-                color: Colors.green,
-                fontFamily: 'Courier',
-                fontSize: 20,
-              ),
-            )),
-            // 현재 출력 중인 줄을 표시 (완성되기 전)
-            if (currentLine < linesToAdd.length)
-              Text(
-                currentText,
+            ...lines.map((line) => Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                line,
                 style: const TextStyle(
                   color: Colors.green,
                   fontFamily: 'Courier',
                   fontSize: 20,
                 ),
               ),
+            )),
+            // 현재 출력 중인 줄을 표시 (완성되기 전)
+            if (currentLine < linesToAdd.length)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  currentText,
+                  style: const TextStyle(
+                    color: Colors.green,
+                    fontFamily: 'Courier',
+                    fontSize: 20,
+                  ),
+                ),
+              ),
             // 타이핑 중일 때 커서 모양을 추가
             if (currentLine < linesToAdd.length)
-              const Text(
-                '_',
-                style: TextStyle(
-                  color: Colors.green,
-                  fontFamily: 'Courier',
-                  fontSize: 20,
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  '_',
+                  style: TextStyle(
+                    color: Colors.green,
+                    fontFamily: 'Courier',
+                    fontSize: 20,
+                  ),
                 ),
               ),
           ],

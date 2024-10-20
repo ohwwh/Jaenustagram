@@ -4,9 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:jaenuestagram/src/components/avatar.dart';
 import 'package:jaenuestagram/src/components/image_data.dart';
 import 'package:jaenuestagram/src/components/likebutton.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class PostWidget extends StatelessWidget {
-  const PostWidget({super.key});
+  final String nickName;
+  final String thumbPath;
+  final List<String> imageUrls;
+  final String firstHash;
+  final String comment;
+  final PageController _pageController = PageController();
+  PostWidget({super.key,
+    required this.nickName,
+    required this.imageUrls,
+    required this.thumbPath,
+    required this.firstHash,
+    required this.comment
+  });
 
 
   Widget _header() {
@@ -16,9 +29,9 @@ class PostWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           AvatarWidget(
-              thumbPath: 'assets/photos/240px-Jordan_by_Lipofsky_16577.jpg',
+              thumbPath: thumbPath,
               type: AvatarType.TYPE3,
-              nickname: '째히',
+              nickname: nickName,
               size: 40,
           ),
           GestureDetector(
@@ -35,13 +48,61 @@ class PostWidget extends StatelessWidget {
     );
   }
 
+/*  Widget _image() {
+    return CachedNetworkImage(
+      imageUrl: imageUrl,
+      errorWidget: (context, url, error) => Container(
+        color: Colors.black,
+        height: 250,
+        width: double.infinity,
+        child: Center(
+          child: Text(
+            'Image load error: $error',
+            style: const TextStyle(color: Colors.white),
+          ),
+        ),
+      ),
+    );
+  }*/
   Widget _image() {
-/*    return CachedNetworkImage(
-        imageUrl: "https://img.hankyung.com/photo/202309/PAF20230902302901009_P4.jpg"
-     );*/
-
-    return const ImageData(
-        'assets/photos/PAF20230902302901009_P4.jpg'
+    return Column(
+      children: [
+        SizedBox(
+          height: 250,
+          width: double.infinity,
+          child: PageView.builder(
+            controller: _pageController,
+            itemCount: imageUrls.length,
+            itemBuilder: (context, index) {
+              return CachedNetworkImage(
+                imageUrl: imageUrls[index],
+                fit: BoxFit.cover,
+                errorWidget: (context, url, error) => Container(
+                  color: Colors.black,
+                  height: 250,
+                  width: double.infinity,
+                  child: Center(
+                    child: Text(
+                      'Image load error: $error',
+                      style: const TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+        const SizedBox(height: 10),
+        SmoothPageIndicator(
+          controller: _pageController,
+          count: imageUrls.length,
+          effect: const ScrollingDotsEffect(
+            dotHeight: 6,
+            dotWidth: 6,
+            activeDotColor: Colors.blue,
+          ),
+        ),
+      ],
     );
   }
 
@@ -89,7 +150,7 @@ class PostWidget extends StatelessWidget {
             ),
           ),
           ExpandableText(
-            '#두근두근 첫 손 잡기\n오늘부터 1일!\n',
+            "$firstHash\n$comment\n",
             prefixText: '뉴뉴',
             onPrefixTap: () {},
             prefixStyle: const TextStyle(

@@ -44,7 +44,7 @@ class _MyPageState extends State<MyPage> {
       children: [
         Row(
             children: [
-              AvatarWidget(thumbPath: 'assets/photos/240px-Jordan_by_Lipofsky_16577.jpg',
+              AvatarWidget(thumbPath: 'assets/photos/jaehee_profile.jpeg',
                   type: AvatarType.TYPE3,
                 size: 80
               ),

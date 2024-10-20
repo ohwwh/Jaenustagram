@@ -11,6 +11,7 @@ enum AvatarType { TYPE1, TYPE2, TYPE3, TYPE4 }
 class AvatarWidget extends StatelessWidget {
   bool? hasStory;
   String thumbPath;
+  String imageUrl;
   String? nickname;
   AvatarType type;
   double? size;
@@ -23,7 +24,8 @@ class AvatarWidget extends StatelessWidget {
     this.nickname,
     required this.type,
     this.size = 65,
-    this.isSecret = false
+    this.isSecret = false,
+    this.imageUrl = ''
   }) : super(key: key);
 
   Widget type1Widget(){
@@ -77,7 +79,7 @@ class AvatarWidget extends StatelessWidget {
     );
   }
 
-  Widget type4Widget(String? nickname){
+  Widget type4Widget(String? nickname, String imageUrl){
     return Container(
         margin: const EdgeInsets.symmetric(horizontal: 5),
         padding: const EdgeInsets.all(2),
@@ -92,7 +94,7 @@ class AvatarWidget extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Get.to(() => Story(avatarWidget: this,
-              imageUrl: thumbPath,
+              imageUrl: imageUrl,
               isSecret: isSecret));
         },
         child: type2Widget(),
@@ -110,7 +112,7 @@ class AvatarWidget extends StatelessWidget {
       case AvatarType.TYPE3:
         return type3Widget();
       case AvatarType.TYPE4:
-        return type4Widget(nickname);
+        return type4Widget(nickname, imageUrl);
     }
     return Container();
   }

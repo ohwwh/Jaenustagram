@@ -24,7 +24,8 @@ class _HomeState extends State<Home> {
     _avatars.add(AvatarWidget(
       type: AvatarType.TYPE4,
       nickname: "뉴뉴",
-      thumbPath: 'assets/photos/Caitlin-Clark-Indiana-Fever-Minnesota-Linx-WNBA-Getty-2162026714-H-MAIN-2024.webp',
+      thumbPath: 'assets/photos/nunu_profile.jpeg',
+      imageUrl: getImagePath("ring.jpg"),
     ));
   }
 
@@ -36,7 +37,7 @@ class _HomeState extends State<Home> {
           _avatars.add(AvatarWidget(
             type: AvatarType.TYPE4,
             nickname: "뉴뉴",
-            thumbPath: 'assets/photos/Caitlin-Clark-Indiana-Fever-Minnesota-Linx-WNBA-Getty-2162026714-H-MAIN-2024.webp',
+            thumbPath: 'assets/photos/nunu_profile.jpeg',
             isSecret: true,
           ));
           _hasReachedEnd = true;
@@ -53,7 +54,7 @@ class _HomeState extends State<Home> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('New Story Available'),
-          content: const Text('Check out the new story!'),
+          content: const Text('새로운 스토리를 확인하세요!'),
           actions: <Widget>[
             TextButton(
               child: const Text('OK'),
@@ -78,7 +79,7 @@ class _HomeState extends State<Home> {
     return Stack(
         children: [
           AvatarWidget(
-              thumbPath: 'assets/photos/240px-Jordan_by_Lipofsky_16577.jpg',
+              thumbPath: 'assets/photos/jaehee_profile.jpeg',
               type: AvatarType.TYPE2,
               size: 70
           ),
@@ -128,7 +129,147 @@ class _HomeState extends State<Home> {
 
   Widget _postList () {
     return Column(
-      children: List.generate(10, (index) => PostWidget()).toList(),
+      children: [
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("202105.jpg"),
+            ],
+            firstHash: "#두근두근 첫 손 잡기",
+            comment: "오늘부터 1일!"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("sheep_1.jpg"),
+              getImagePath("sheep_2.jpg"),
+            ],
+            firstHash: "#몽토랑 양떼목장",
+            comment: "나를 노리는 양떼들과 알프스 소녀 같은 재희"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("hoccance_1.jpg"),
+              getImagePath("hoccance_2.jpg"),
+            ],
+            firstHash: "#호캉스 #그랜드조선호텔",
+            comment: "맛있는 조식! 헬스장과 수영장까지 즐기려니 몸이 두개라도 모자라"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("100_1.jpg"),
+              getImagePath("100_2.jpg"),
+              getImagePath("100_3.jpg"),
+            ],
+            firstHash: "#100일 #첫 기념일 #앙꼬야 누나 잘 지켜주고 있니",
+            comment: "사귀고 처음 맞는 기념일! 꽃을 받고 기뻐하는 너의 모습이 너무 예뻐"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("jaeheebirthday_1.jpg"),
+              getImagePath("jaeheebirthday_2.jpg"),
+              getImagePath("jaeheebirthday_3.jpg"),
+            ],
+            firstHash: "#째히생일 #바로이걸보는오늘",
+            comment: "처음 챙겨준 생일. 서프라이즈 선물을 좋아할까?"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("autumnleaves_1.jpg"),
+              getImagePath("autumnleaves_2.jpg"),
+              getImagePath("autumnleaves_3.jpg"),
+            ],
+            firstHash: "#태백 #철암 #단풍놀이",
+            comment: "같이 철암으로 단풍놀이 간 날. 날씨도 좋고, 단풍도 내 옆의 그녀도 예쁜 완벽한 하루"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("aquarium_1.jpg"),
+              getImagePath("aquarium_2.jpg"),
+              getImagePath("aquarium_3.jpg"),
+            ],
+            firstHash: "#잠실 #롯데월드 #아쿠아리움",
+            comment: "아쿠아리움에 갔다. 펭귄이 귀여웠다. 하지만 너는 더 귀엽다"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("chrismas_1.jpg"),
+              getImagePath("christmas_2.jpg"),
+              getImagePath("christmas_3.jpg"),
+            ],
+            firstHash: "#메리크리스마스",
+            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("aquarium_1.jpg"),
+              getImagePath("aquarium_2.jpg"),
+              getImagePath("aquarium_3.jpg"),
+            ],
+            firstHash: "#잠실 #롯데월드 #아쿠아리움",
+            comment: "아쿠아리움에 갔다. 펭귄이 귀여웠다. 하지만 너는 더 귀엽다"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("aquarium_1.jpg"),
+              getImagePath("aquarium_2.jpg"),
+              getImagePath("aquarium_3.jpg"),
+            ],
+            firstHash: "#잠실 #롯데월드 #아쿠아리움",
+            comment: "아쿠아리움에 갔다. 펭귄이 귀여웠다. 하지만 너는 더 귀엽다"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("aquarium_1.jpg"),
+              getImagePath("aquarium_2.jpg"),
+              getImagePath("aquarium_3.jpg"),
+            ],
+            firstHash: "#잠실 #롯데월드 #아쿠아리움",
+            comment: "아쿠아리움에 갔다. 펭귄이 귀여웠다. 하지만 너는 더 귀엽다"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("aquarium_1.jpg"),
+              getImagePath("aquarium_2.jpg"),
+              getImagePath("aquarium_3.jpg"),
+            ],
+            firstHash: "#잠실 #롯데월드 #아쿠아리움",
+            comment: "아쿠아리움에 갔다. 펭귄이 귀여웠다. 하지만 너는 더 귀엽다"
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              getImagePath("aquarium_1.jpg"),
+              getImagePath("aquarium_2.jpg"),
+              getImagePath("aquarium_3.jpg"),
+            ],
+            firstHash: "#잠실 #롯데월드 #아쿠아리움",
+            comment: "아쿠아리움에 갔다. 펭귄이 귀여웠다. 하지만 너는 더 귀엽다"
+        ),
+      ],
     );
   }
 

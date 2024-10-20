@@ -34,9 +34,21 @@ class _StoryState extends State<Story> {
             // 1. 사진이 있고
             Positioned.fill(
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(15.0),
-                child: isSecret ? DosScreen() : ImageData(
-                    imageUrl,
+                //borderRadius: BorderRadius.circular(15.0),
+                child: isSecret ? DosScreen() : CachedNetworkImage(
+                    imageUrl: imageUrl,
+                    fit: BoxFit.cover,
+                    errorWidget: (context, url, error) => Container(
+                      color: Colors.black,
+                      height: 250,
+                      width: double.infinity,
+                      child: Center(
+                        child: Text(
+                          'Image load error: $error',
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
                 ),
               ),
             ),
@@ -47,20 +59,18 @@ class _StoryState extends State<Story> {
               child: Row(
                 children: [
                   SizedBox(
-                      width: avatarWidget.size! * 0.8,
-                      height: avatarWidget.size! * 0.8,
-                      child: avatarWidget
+                    width: avatarWidget.size! * 0.8,
+                    height: avatarWidget.size! * 0.8,
+                    child: avatarWidget,
                   ),
                   const SizedBox(width: 10),
-                  Positioned(
-                    height: 10,
-                    child: Text(
-                      avatarWidget.nickname ?? '',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  // Positioned 제거
+                  Text(
+                    avatarWidget.nickname ?? '',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],

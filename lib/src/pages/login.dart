@@ -10,7 +10,7 @@ class Login extends StatelessWidget {
   final TextEditingController passwordController = TextEditingController();
 
   final String correctUsername = "김재희";
-  final String correctPassword = "19941022";
+  final String correctPassword = "910224";
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class Login extends StatelessWidget {
               controller: passwordController,
               obscureText: true,  // 비밀번호 입력시 텍스트 숨기기
               decoration: InputDecoration(
-                labelText: 'Password: 당신의 생일(연월일)',
+                labelText: 'Password: 당신의 집 비밀번호',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
@@ -78,6 +78,14 @@ class Login extends StatelessWidget {
                     color: Colors.white
                   ),
                 ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              '로그인 하기 전 소리를 켜 주세요',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 13,
               ),
             ),
           ],

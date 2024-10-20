@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+export 'package:jaenuestagram/src/components/image_data.dart' show getImagePath;
 
 class ImageData extends StatelessWidget {
   final String icon;
@@ -30,6 +31,11 @@ class ImageData extends StatelessWidget {
       return result;
     }
   }
+}
+
+String getImagePath(String fileName) {
+  const String prefix = "https://raw.githubusercontent.com/ohwwh/Jaenustagram/master/assets/photos/";
+  return prefix + fileName;
 }
 
 class thumPath {
