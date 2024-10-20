@@ -68,23 +68,27 @@ class PostWidget extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 250,
+          height: 350,
           width: double.infinity,
           child: PageView.builder(
             controller: _pageController,
             itemCount: imageUrls.length,
             itemBuilder: (context, index) {
-              return CachedNetworkImage(
-                imageUrl: imageUrls[index],
-                fit: BoxFit.cover,
-                errorWidget: (context, url, error) => Container(
-                  color: Colors.black,
-                  height: 250,
-                  width: double.infinity,
-                  child: Center(
-                    child: Text(
-                      'Image load error: $error',
-                      style: const TextStyle(color: Colors.white),
+              return Container(
+                color: Colors.black,
+                child: CachedNetworkImage(
+                  imageUrl: imageUrls[index],
+                  fit: BoxFit.contain,
+                  alignment: Alignment.center,
+                  errorWidget: (context, url, error) => Container(
+                    color: Colors.black,
+                    height: 350,
+                    width: double.infinity,
+                    child: Center(
+                      child: Text(
+                        'Image load error: $error',
+                        style: const TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                 ),

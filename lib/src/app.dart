@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jaenuestagram/src/components/avatar.dart';
@@ -20,6 +21,18 @@ class _AppState extends State<App> {
     super.initState();
     Get.put(AudioPlayerController());
     Get.find<AudioPlayerController>().playMusic();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _preloadImages();
+  }
+
+  void _preloadImages() {
+    for (var url in thumPath.getAllImageUrls()) {
+      precacheImage(CachedNetworkImageProvider(url), context);
+    }
   }
 
   @override

@@ -39,48 +39,27 @@ String getImagePath(String fileName) {
 }
 
 class thumPath {
-  static String get _202105 => "";
-  static String get _202106 => "";
-  static String get _202107 => "";
-  static String get _202108 => "";
-  static String get _202109 => "";
-  static String get _202110 => "";
-  static String get _202111 => "";
-  static String get _202112 => "";
-  static String get _202201 => "";
-  static String get _202202 => "";
-  static String get _202203 => "";
-  static String get _202204 => "";
-  static String get _202205 => "";
-  static String get _202206 => "";
-  static String get _202208 => "";
-  static String get _202209 => "";
-  static String get _202210 => "";
-  static String get _202211 => "";
-  static String get _202212 => "";
-  static String get _202301 => "";
-  static String get _202302 => "";
-  static String get _202303 => "";
-  static String get _202304 => "";
-  static String get _202305 => "";
-  static String get _202306 => "";
-  static String get _202307 => "";
-  static String get _202308 => "";
-  static String get _202309 => "";
-  static String get _202310 => "";
-  static String get _202311 => "";
-  static String get _202312 => "";
-  static String get _202401 => "";
-  static String get _202402 => "";
-  static String get _202403 => "";
-  static String get _202404 => "";
-  static String get _202405 => "";
-  static String get _202406 => "";
-  static String get _202407 => "";
-  static String get _202408 => "";
-  static String get _202409 => "";
-  static String get _202410 => "";
+  // 기존의 개별 이미지 관리 (여기서는 getImagePath를 사용)
+  static Map<String, String Function()> imageUrls = {
+    'sheep_1': () => getImagePath("sheep_1.jpg"),
+    'sheep_2': () => getImagePath("sheep_2.jpg"),
+    'hoccance_1': () => getImagePath("hoccance_1.jpg"),
+    'hoccance_2': () => getImagePath("hoccance_2.jpg"),
+    'hundred_1': () => getImagePath("hundred_1.jpg"),
+    'hundred_2': () => getImagePath("100_2.jpg"),
+    'hundred_3': () => getImagePath("100_3.jpg"),
+    'jaeheebirthday_1': () => getImagePath("jaehee_birthday_1.jpg"),
+    'jaeheebirthday_2': () => getImagePath("jaehee_birthday_2.jpg"),
+    'jaeheebirthday_3': () => getImagePath("jaehee_birthday_3.jpg"),
+  };
 
+  static List<String> getAllImageUrls() {
+    return imageUrls.values.map((getImagePathFunc) => getImagePathFunc()).toList();
+  }
+
+  static String getImageUrl(String key) {
+    return thumPath.imageUrls[key]?.call() ?? 'default_image_path.jpg';
+  }
 }
 
 class IconsPath {
