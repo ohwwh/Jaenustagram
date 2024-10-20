@@ -46,11 +46,10 @@ class thumPath {
     'hoccance_1': () => getImagePath("hoccance_1.jpg"),
     'hoccance_2': () => getImagePath("hoccance_2.jpg"),
     'hundred_1': () => getImagePath("hundred_1.jpg"),
-    'hundred_2': () => getImagePath("100_2.jpg"),
-    'hundred_3': () => getImagePath("100_3.jpg"),
-    'jaeheebirthday_1': () => getImagePath("jaehee_birthday_1.jpg"),
-    'jaeheebirthday_2': () => getImagePath("jaehee_birthday_2.jpg"),
-    'jaeheebirthday_3': () => getImagePath("jaehee_birthday_3.jpg"),
+    'hundred_2': () => getImagePath("hundred_2.jpg"),
+    'hundred_3': () => getImagePath("hundred_3.jpg"),
+    'jaeheebirthday_1': () => getImagePath("jaeheebirthday_1.jpg"),
+    'jaeheebirthday_2': () => getImagePath("jaeheebirthday_2.jpg"),
   };
 
   static List<String> getAllImageUrls() {
