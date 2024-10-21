@@ -1,31 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:jaenuestagram/src/components/image_data.dart';
 
 class Likebutton extends StatefulWidget {
-  const Likebutton({super.key, this.width = 100, this.isContrast = false, this.isSecret = false});
+  const Likebutton({super.key, this.width = 100, this.isContrast = false, this.isSecret = false, this.scrollController = null});
 
   final double? width;
   final bool isContrast;
   final bool isSecret;
+  final ScrollController? scrollController;
 
   @override
   State<Likebutton> createState() => _LikebuttonState();
 }
 
 class _LikebuttonState extends State<Likebutton> {
-  final ScrollController _scrollController = ScrollController();
-
   @override
   void initState() {
     super.initState();
     currentIcon = ImageData(
       IconsPath.likeOffIcon,
       isContrast: widget.isContrast,
-      width: widget.width ?? 100, // 기본값을 100으로 설정
+      width: widget.width ?? 100,
     );
+    isSecret = widget.isSecret;
+    _scrollController = widget.scrollController;
   }
   late ImageData currentIcon;
   bool isLiked = false;
+  bool isSecret = false;
+  ScrollController? _scrollController;
 
   void _showStoryAlert() {
     showDialog(
@@ -39,7 +43,7 @@ class _LikebuttonState extends State<Likebutton> {
               child: const Text('OK'),
               onPressed: () {
                 Get.back();
-                _scrollController.jumpTo(0);
+                _scrollController?.jumpTo(0);
               },
             ),
           ],
@@ -68,7 +72,8 @@ class _LikebuttonState extends State<Likebutton> {
                 width: widget.width
             );
             isLiked = true;
-            _showStoryAlert()
+            if (isSecret = true && _scrollController != null)
+              _showStoryAlert();
           }
         });
       },

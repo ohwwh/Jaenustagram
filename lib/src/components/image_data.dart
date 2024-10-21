@@ -56,7 +56,7 @@ class thumPath {
     'aquarium_2': () => getImagePath("aquarium_2.jpg"),
     'aquarium_2': () => getImagePath("aquarium_3.jpg"),
     'christmas_1': () => getImagePath("christmas_1.jpg"),
-    'christmas_2': () => getImagePath("christmas_2.jpg),
+    'christmas_2': () => getImagePath("christmas_2.jpg"),
     'christmas_3': () => getImagePath("christmas_3.jpg"),
     'ski_1': () => getImagePath("ski_1.jpg"),
     'ski_2': () => getImagePath("ski_2.jpg"),

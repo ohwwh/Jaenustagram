@@ -216,131 +216,161 @@ class _HomeState extends State<Home> {
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('ski_1'),
+              thumPath.getImageUrl('ski_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('graduation_1'),
+              thumPath.getImageUrl('graduation_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('nunubirthday_1'),
+              thumPath.getImageUrl('nunubirthday_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('nunubirthday_2'),
+              thumPath.getImageUrl('nunubirthday_3'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('jeonju_1'),
+              thumPath.getImageUrl('jeonju_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('waterpark_1'),
+              thumPath.getImageUrl('waterpark_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('everland_1'),
+              thumPath.getImageUrl('everland_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('snowfestival_1'),
+              thumPath.getImageUrl('snowfestival_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('japan_1'),
+              thumPath.getImageUrl('japan_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('gangneung_1'),
+              thumPath.getImageUrl('gangneung_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('thousand_1'),
+              thumPath.getImageUrl('thousand_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('climbing_1'),
+              thumPath.getImageUrl('climbing_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
             thumbPath: "assets/photos/nunu_profile.jpeg",
             imageUrls: [
-              thumPath.getImageUrl('christmas_1'),
-              thumPath.getImageUrl('christmas_2'),
+              thumPath.getImageUrl('coco_1'),
+              thumPath.getImageUrl('coco_2'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: ""
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              thumPath.getImageUrl('third_1'),
+              thumPath.getImageUrl('third_2'),
+            ],
+            firstHash: "",
+            comment: ""
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              thumPath.getImageUrl('busan_1'),
+              thumPath.getImageUrl('busan_2'),
+            ],
+            firstHash: "",
+            comment: ""
+        ),
+        PostWidget(
+            nickName: "뉴뉴",
+            thumbPath: "assets/photos/nunu_profile.jpeg",
+            imageUrls: [
+              thumPath.getImageUrl('busan_2'),
+              thumPath.getImageUrl('busan_3'),
+            ],
+            firstHash: "",
+            comment: ""
         ),
         PostWidget(
             nickName: "뉴뉴",
@@ -348,8 +378,9 @@ class _HomeState extends State<Home> {
             imageUrls: [
               thumPath.getImageUrl('last'),
             ],
-            firstHash: "#메리크리스마스",
-            comment: "크리스마스 파티! 지금 보면 어찌나 좁은지, 하지만 어찌나 행복해 보이는지"
+            firstHash: "",
+            comment: "",
+            scrollController: _scrollController,
         ),
       ],
     );

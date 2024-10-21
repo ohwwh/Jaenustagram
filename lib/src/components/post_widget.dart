@@ -12,13 +12,19 @@ class PostWidget extends StatelessWidget {
   final List<String> imageUrls;
   final String firstHash;
   final String comment;
+  final String date;
+  final bool isSecret;
+  final ScrollController? scrollController;
   final PageController _pageController = PageController();
   PostWidget({super.key,
     required this.nickName,
     required this.imageUrls,
     required this.thumbPath,
     required this.firstHash,
-    required this.comment
+    required this.comment,
+    this.date = '1일 전',
+    this.isSecret = false,
+    this.scrollController = null
   });
 
 
@@ -118,7 +124,7 @@ class PostWidget extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Likebutton(width: 65, isContrast: false),
+              Likebutton(width: 65, isContrast: false, isSecret: isSecret, scrollController: scrollController,),
               const SizedBox(width: 5),
               ImageData(
                 IconsPath.replyIcon,
@@ -189,11 +195,11 @@ class PostWidget extends StatelessWidget {
   }
 
   Widget _dateAgo(){
-      return const Padding(
-           padding: EdgeInsets.symmetric(horizontal: 15),
+      return Padding(
+           padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Text(
-          '1일 전',
-          style: TextStyle(
+          date,
+          style: const TextStyle(
             color: Colors.grey,
             fontSize: 11,
           ),

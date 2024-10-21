@@ -13,8 +13,8 @@ class DosScreen extends StatefulWidget {
 class _DosScreenState extends State<DosScreen> {
   List<String> lines = [];
   List<String> linesToAdd = [
-    "첫 만남: 2021/05/14",
-    "우리가 만난지: 1252일",
+    "첫 만남: 2021/05/13",
+    "우리가 만난지: 1259일",
     "오늘, 당신과 함께", "새로운 여행을 시작하려고 합니다.",
     "저와 함께",
     "새로운 1일을 시작하시겠습니까?",
