@@ -34,7 +34,7 @@ class ImageData extends StatelessWidget {
 }
 
 String getImagePath(String fileName) {
-  const String prefix = "https://raw.githubusercontent.com/ohwwh/Jaenustagram/master/assets/photos/";
+  const String prefix = "https://raw.githubusercontent.com/ohwwh/JaenustagramPhotos/master/";
   return prefix + fileName;
 }
 
